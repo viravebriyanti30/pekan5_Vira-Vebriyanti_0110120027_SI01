@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Rupiah</title>
+</head>
+<body style="background-color: #bdc3c7;">
+    <center>
+        <fieldset style="color: black;">
+            <legend style="text-align: center;color:black"><h1>Kurs Rupiah - Mata Uang Asing</h1></legend>
+        <table border="1" style="width: 50%;text-align: center;border-color: black;">
+            <tr style="background-color: #2bcbba;">
+                <td><b>Masukan Nilai</b></td>
+                <td><b>Valas</b></td>
+                <td><b>Nilai Rupiah</b></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" onkeyup="uang()" placeholder="Masukkan Nilai disini" id="angka" name="angka">
+                </td>
+                <td>
+                    <select name="uang" id="uang" onchange="uang()">
+                    <option value="0">Ubah Kurs mata uang</option>
+                    <option value="1">Dollar US</option>
+                    <option value="2">Dollar Singapore</option>
+                    <option value="3">Ringgit Malaysia</option>
+                    <option value="4">Yen Jepang</option>
+                    <option value="5">Euro</option>
+                    <option value="6">Riyal Arab Saudi</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="rupiah" name="rupiah" placeholder="hasil ke dalam rupiah" disabled="">
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    </center>
+    <script>
+        function uang(){
+            let mata_uang = document.getElementById("uang").value;
+            if (mata_uang == 1){
+                masukan = document.getElementById("angka").value;
+                nilai = 9915;
+                hitung_kurs = nilai * masukan;
+                document.getElementById("rupiah").value = hitung_kurs;
+                console.log(hitung_kurs);
+            }
+            else if (mata_uang == 2){
+                masukan = document.getElementById("angka").value;
+                nilai = 13472;
+                hitung_kurs = nilai * masukan;
+                document.getElementById("rupiah").value = hitung_kurs;
+                console.log(hitung_kurs);
+            }
+            else if (mata_uang == 3){
+                masukan = document.getElementById("angka").value;
+                nilai = 874;
+                hitung_kurs = nilai * masukan;
+                document.getElementById("rupiah").value = hitung_kurs;
+                console.log(hitung_kurs);
+            }
+            else if (mata_uang == 4){
+                masukan = document.getElementById("angka").value;
+                nilai = 120;
+                hitung_kurs = nilai * masukan;
+                document.getElementById("rupiah").value = hitung_kurs;
+                console.log(hitung_kurs);
+            }
+            else if (mata_uang == 5){
+                masukan = document.getElementById("angka").value;
+                nilai = 15888;
+                hitung_kurs = nilai * masukan;
+                document.getElementById("rupiah").value = hitung_kurs;
+                console.log(hitung_kurs);
+            }
+            else if (mata_uang == 6){
+                masukan = document.getElementById("angka").value;
+                nilai = 3592;
+                hitung_kurs = nilai * masukan;
+                document.getElementById("rupiah").value = hitung_kurs;
+                console.log(hitung_kurs);
+            }
+        }
+    </script>
+</body>
+</html>

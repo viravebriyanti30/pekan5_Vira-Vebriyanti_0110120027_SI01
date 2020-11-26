@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Message</title>
+</head>
+<body>
+    <center>
+    <form method="request" onsubmit="return send();">
+        <h2>ChatBox Aplication</h2>
+        <br>
+        <fieldset style="box-sizing: border-box;padding-top: 100px;width: 50%;background-color: #33d9b2;">
+        <div id="isi_pesan"></div>
+        <div id="isi_pesan" style="text-align:buttom;">
+        <input type="text" id="chat" name="chat" style="width: 50%;">
+        <button type="submit" onclick="return send();">Send Message</button>
+        </div>
+        </fieldset>
+    </form>
+    </center>
+    <script>
+        function send(){
+            let chat = document.getElementById("chat").value;
+            document.getElementById("isi_pesan").innerHTML += chat+"<br/>";
+            document.getElementById("chat").value="";
+            return false;
+        }
+    </script>
+</body>
+</html>

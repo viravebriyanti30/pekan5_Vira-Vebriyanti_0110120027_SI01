@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN</title>
+</head>
+<body style="margin-left: 400px;margin-right: 400px;font-family: 'times';margin-top: 100px;">
+<fieldset style="background-color:#b2bec3">
+<br>
+<script src="otentikasi.js"></script>
+<div>
+	<center>
+		<form method="REQUEST" style="text-align: center;">
+			Username :<br>
+			<input type="text" placeholder="username" id="username" name="username"><br>
+			Password<br>
+			<input type="password"  placeholder="password" id="password" name="password"><br><br>
+			<button type="submit" onclick="return login()">SUBMIT</button>
+		</form>
+	</center>
+</div>
+<br>
+<div class="container" style="text-align: center;">
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+    <label for="signup"> &emsp;don't have an account yet?<a href="signup.html" target="blank"><u>sign up</u></a></label>
+</div>
+	<script type="text/javascript">
+		function login() {
+			username = document.getElementById("username").value;
+			password = document.getElementById("password").value;
+			if (username == "vira" && password == "2001"){
+				window.location = "login2.html";
+			{
+				alert("log in sukses");
+			window.location = "login2.html";
+				return false;}}
+			else{
+				alert("Username / Password anda salah");
+			}
+		}
+	</script>
+</body>
+</html>

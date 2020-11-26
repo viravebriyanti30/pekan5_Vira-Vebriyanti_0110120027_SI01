@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+<body style="margin: 100px;">
+    <center>
+        <h1>Choose The Cartoon Character Below</h1>
+        <select name="picture" id="list_picture" onchange="gambar();">
+        <option value="">Choose The Character Below</option>
+        <option value="Spongebob.jpg">Spongebob</option>
+        <option value="crab.jpg">Mr. Crab</option>
+        <option value="gary.jpg">Gary</option>
+        <option value="gurita.jpg">Squidward</option>
+        <option value="sandy.jpg">Sandy</option>
+        <option value="plankton.jpg">Plankton</option>
+        <option value="patrick.png">Patrick</option>
+        </select>
+    </center>
+    <br>
+    <img src="" alt=" " id="picture" style="width: 500px;text-align: center;">
+    <script>
+        function gambar(){
+		let picture = document.getElementById("list_picture").value;
+		document.getElementById("picture").src = picture;
+		alert("Ini Gambar " + picture);
+	}
+    </script>
+    
+</body>
+</html>
